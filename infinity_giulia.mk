@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/giulia/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_giulia
+PRODUCT_NAME := infinity_giulia
 PRODUCT_DEVICE := giulia
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -29,3 +29,24 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=CPH2691 \
     SystemDevice=OP5D3BL1 \
     SystemName=CPH2691
+
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := UNOFFICIAL
+
+# Maintainer Name
+INFINITY_MAINTAINER := "Adarsh | Duchamp⚡️" 
+
+# Whether the package includes System BLURS
+TARGET_SUPPORTS_BLUR := false
+
+# Whether the compiled package ships Google Apps:
+WITH_GAPPS := false
+
+# Whether the compiled package ships more Google Apps:
+TARGET_SHIPS_FULL_GAPPS := false
+
+# Whether the compiled shipped gapps package uses Google Dialer:
+TARGET_SHIPS_GOOGLE_DIALER := false
+
+# Whether the compiled package ships Motorola Calculator:
+USE_MOTO_CALCULATOR := true
